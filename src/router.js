@@ -32,24 +32,6 @@ export default new Router({
       component: () =>
         import( /* webpackChunkName: "about" */ "./views/Portfolio.vue")
     },
-    // {
-    //   path: "/portfolio/video",
-    //   name: "videoPortfolio",
-    //   component: () =>
-    //     import( /* webpackChunkName: "about" */ "./views/Portfolio/Video.vue")
-    // },
-    // {
-    //   path: "/portfolio/graphic",
-    //   name: "graphicPortfolio",
-    //   component: () =>
-    //     import( /* webpackChunkName: "about" */ "./views/Portfolio/Graphic.vue")
-    // },
-    // {
-    //   path: "/portfolio/web",
-    //   name: "webPortfolio",
-    //   component: () =>
-    //     import( /* webpackChunkName: "about" */ "./views/Portfolio/Web.vue")
-    // },
     {
       path: "*",
       name: "Error",
