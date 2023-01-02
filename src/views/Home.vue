@@ -51,46 +51,10 @@
                 Hello! I'm Kimberly Lai. I'm a front-end developer who
                 is passionate about code development and project management.
                 I love doing yoga🧘🏻‍♀️ and travelling🌁 when I'm not coding. 
-                <!-- <span
-                  class="light-blue--text text--darken-1 font-weight-bold"
-                >VUE</span>, building great user experiences,
-                fighting for simplicity over complexity and constantly learning.
-                When I'm not coding or making videos, you'll find me traveling across Europe. -->
               </p>
             </div>
           </div>
         </v-card-title>
-
-        <!-- <v-card-actions class="hidden-sm-and-down">
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.icon"
-            fab
-            dark
-            outline
-            color="green"
-            :href="icon.href"
-            target="_blank"
-          >
-            <v-icon dark>{{icon.icon}}</v-icon>
-          </v-btn>
-        </v-card-actions>
-
-        <v-card-actions class="hidden-md-and-up justify-center">
-          <v-btn
-            v-for="icon in icons"
-            :key="icon.icon"
-            small
-            fab
-            dark
-            outline
-            color="green"
-            :href="icon.href"
-            target="_blank"
-          >
-            <v-icon dark>{{icon.icon}}</v-icon>
-          </v-btn>
-        </v-card-actions> -->
       </v-card>
     </v-flex>
   </v-layout>
@@ -101,59 +65,20 @@ import { VueTyper } from "vue-typer";
 import VueCompareImage from "vue-compare-image";
 
 export default {
-  // metaInfo: {
-  //   title: "Home",
-  //   titleTemplate: "%s ← Eldin's Space",
-  //   meta: [
-  //     { name: "viewport", content: "width=device-width, initial-scale=1" },
-  //     { name: "description", content: "Eldin Zaimovic's Portfolio" },
-  //     { charset: "utf-8" },
-  //     { property: "og:title", content: "Eldin' Space" },
-  //     { property: "og:site_name", content: "Eldin' Space" },
-  //     { property: "og:type", content: "website" },
-  //     { property: "og:url", content: "https://eldin.space" },
-  //     {
-  //       property: "og:image",
-  //       content: "https://i.imgur.com/Dcz2PGx.jpg"
-  //     },
-  //     { property: "og:description", content: "Eldin Zaimovic's Portfolio" }
-  //   ]
-  // },
   components: {
     "vue-typer": VueTyper,
     VueCompareImage
   },
   data() {
     return {
-      // icons: [
-      //   { href: "https://github.com/EldinZaimovic", icon: "fab fa-github" },
-      //   {
-      //     href: "https://stackoverflow.com/users/story/9660700",
-      //     icon: "fab fa-stack-overflow"
-      //   },
-      //   { href: "https://twitter.com/EldinMatricar", icon: "fab fa-twitter" },
-      //   {
-      //     href: "https://www.linkedin.com/in/eldin-zaimovic",
-      //     icon: "fab fa-linkedin-in"
-      //   },
-      //   {
-      //     href: "https://www.xing.com/profile/Eldin_Zaimovic?sc_o=mxb_p",
-      //     icon: "fab fa-xing"
-      //   },
-      //   {
-      //     href: "https://www.facebook.com/EldinVasVoli",
-      //     icon: "fab fa-facebook-f"
-      //   },
-      //   { href: "https://www.instagram.com/matricar", icon: "fab fa-instagram" }
-      // ],
       text1: ["Front-End Developer", "Web Developer", "Project Manager"],
-      leftImage: "https://i.imgur.com/bU50uS9.jpg",
-      rightImage: "https://i.imgur.com/z3ZoEEw.jpg",
-      leftImage2: "https://i.imgur.com/SXBitjh.jpg",
-      rightImage2: "https://i.imgur.com/Dcz2PGx.jpg",
+      leftImage: require('../assets/homePage/selfIntroBanner_left.jpg'),
+      rightImage: require('../assets/homePage/selfIntroBanner_right.jpg'),
+      leftImage2: require('../assets/homePage/smallSelfIntroBanner_left.jpg'),
+      rightImage2: require('../assets/homePage/smallSelfIntroBanner_right.jpg'),
       sliderLine: 0,
       hSize: 0,
-      sliderPosition: 0.5
+      sliderPosition: 0.5,
     };
   }
 };
