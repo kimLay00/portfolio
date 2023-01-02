@@ -24,6 +24,9 @@ import TheFooter from "./components/TheFooter";
 
 export default {
   name: "App",
+  metaInfo: {
+    title: "kimberly's portfolio",
+  },
   components: {
     TheHeader,
     TheFooter
