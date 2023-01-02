@@ -26,25 +26,31 @@
             </v-flex>
           </template>
           <v-card v-if="project.dialog">
-            <v-card-title>{{project.title}}</v-card-title>
+            <v-card-title class="text-h1">
+                <h1 class="headline mb-0 font-weight-bold light-blue--text text--darken-1">
+                    <span>{{project.title}}</span>
+                </h1>
+            </v-card-title>
             <v-card-text>
-              <h3 class="headline mb-0">
+              <h2 class="mb-0">
                 <span>Description</span>
-              </h3>
+              </h2>
               <div v-for="($descripton, $index) in project.description"
                 :key="`description${$index}`"
+                class="projectDescriptionContainer"
               >
-              <v-img 
-              contain
-              :src="$descripton.image"
-              width="496"
-              >
-              </v-img>
-              <span>{{$descripton.text}}</span>
+                <v-img 
+                contain
+                :src="$descripton.image"
+                min-width="350"
+                max-width="496"
+                >
+                </v-img>
+                <span>{{$descripton.text}}</span>
               </div>
-              <h3 class="headline mb-0">
+              <h2 class="mb-0">
                 <span>Technology</span>
-              </h3>
+              </h2>
               <v-chip v-for="($tech, $index) in project.tech" 
                 :key="`techChip${$index}`"
                 color="light-blue" text-color="white"
@@ -68,153 +74,63 @@
   
   <script>
   export default {
-    // metaInfo: {
-    //   title: "Web Portfolio",
-    //   titleTemplate: "%s ← Eldin's Space",
-    //   meta: [
-    //     { name: "viewport", content: "width=device-width, initial-scale=1" },
-    //     {
-    //       name: "description",
-    //       content:
-    //         "Eldin Zaimovic's Web Portfolio Vue Vue.js Nuxt Nuxt.js HTML CSS Vuetify Axios GraphQL JavaScript Web Developer Front-End Frontend Designer App Responsive"
-    //     },
-    //     { charset: "utf-8" },
-    //     { property: "og:title", content: "Eldin' Space" },
-    //     { property: "og:site_name", content: "Eldin' Space" },
-    //     { property: "og:type", content: "website" },
-    //     { property: "og:url", content: "https://eldin.space" },
-    //     {
-    //       property: "og:image",
-    //       content: "https://i.imgur.com/Dcz2PGx.jpg"
-    //     },
-    //     {
-    //       property: "og:description",
-    //       content:
-    //         "Eldin Zaimovic's Web Portfolio Vue Vue.js Nuxt Nuxt.js HTML CSS Vuetify Axios GraphQL JavaScript Web Developer Front-End Frontend Designer App Responsive"
-    //     }
-    //   ]
-    // },
     data() {
       return {
         dialog: false,
         projects: [
+            {
+                dialog: false,
+                title: "Translate Tools",
+                keyImage: require('../assets/translateTools/insertKeyWords.jpg'),
+                tech: ["Angular", "Node.js", "MongoDB", "Express.js", "CSS"],
+                description: [
+                  {
+                      image: require('../assets/translateTools/insertKeyWords.jpg'),
+                      text: "Insert Keyword in search box and with selection of input language"
+                  },
+                  {
+                      image: require('../assets/translateTools/selectOutputLang.jpg'),
+                      text: "Output translate language can be selected from box aside."
+                  },
+                  {
+                      image: require('../assets/translateTools/filterResult.jpg'),
+                      text: "User can further filter search result in order to retrieve target translation quickly."
+                  },
+                ]
+            },
            {
             dialog: false,
             title: "Metlife Discovery",
             keyImage: require('../assets/metlifeDiscovery/dataFillingPage.png'),
-            tech: ["HTML", "JavaScript", "JQuery", "NodeJS", "MySQL"],
+            tech: ["HTML", "JavaScript", "JQuery", "CSS", "NodeJS", "MySQL"],
             description: [
               {
                 image: require('../assets/metlifeDiscovery/dataFillingPage.png'),
                 text: "Fill in user's basic information, e.g. age, gender, occupation etc."
               },
-  
+              {
+                image: require('../assets/metlifeDiscovery/productSuggestion.jpeg'),
+                text: "Suggested insurance product will be recommended according to information provided by user."
+              },
+              {
+                image: require('../assets/metlifeDiscovery/recommendedProduct.png'),
+                text: "User can click product bar for reading product details."
+              },
             ]
           },
-          // {
-          //   dialog: false,
-          //   title: "This Site",
-          //   git: "https://github.com/EldinZaimovic/Eldin-Space-Vue",
-          //   demo: "https://eldin.space/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "Storyblok",
-          //     tech3: "HTML",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/sGUofpv.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "Frontend Developer at Brandly.com",
-          //   git: "https://cdn.neow.in/news/images/uploaded/2018/11/1543476286_cybersecurity.jpg",
-          //   demo: "https://www.brandly.com/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "SCSS",
-          //     tech3: "HTML",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/nVqtTAf.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "Digital Madness Test",
-          //   git: "https://github.com/EldinZaimovic/Digital-Madness-test",
-          //   demo: "https://digital-madness-test.netlify.com/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "CSS",
-          //     tech3: "HTML",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/GOIIL06.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "Snowball Coding Challenge",
-          //   git: "https://github.com/EldinZaimovic/SnowBall-Project",
-          //   demo: "https://snowball-test.netlify.com/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "GraphQL",
-          //     tech3: "Axios",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/rXHBs36.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "IBM Coding Challenge - Films Location",
-          //   git: "https://github.com/EldinZaimovic/Film-Location-List",
-          //   demo: "https://film-location-ibm-cc.netlify.com/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "Lodash",
-          //     tech3: "HTML",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/kCN1CFH.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "Stock Trader",
-          //   git: "https://github.com/EldinZaimovic/Stock-Trader",
-          //   demo: "https://stock-trader-eldin.netlify.com/",
-          //   tech: {
-          //     tech1: "VUE",
-          //     tech2: "Vuex",
-          //     tech3: "Firebase",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/wK5dqP7.png"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "Riders Share Newsleter",
-          //   git: "",
-          //   demo: "https://imgur.com/zTMJhGk",
-          //   tech: {
-          //     tech1: "HTML",
-          //     tech2: "CSS",
-          //     tech3: "MailChimp",
-          //     tech4: "JavaScript"
-          //   },
-          //   poster: "https://i.imgur.com/zTMJhGk.jpg"
-          // },
-          // {
-          //   dialog: false,
-          //   title: "My Old Web Portfolio",
-          //   git: "https://github.com/EldinZaimovic/EldinZaimovic.github.io",
-          //   demo: "https://eldinzaimovic.github.io/index.html",
-          //   tech: {
-          //     tech1: "HTML",
-          //     tech2: "CSS",
-          //     tech3: "JavaScript",
-          //     tech4: "jQuery"
-          //   },
-          //   poster: "https://i.imgur.com/AW7CXD5.jpg"
-          // }
+        //   {
+        //         dialog: false,
+        //         title: "",
+        //         keyImage: require('../assets/'),
+        //         tech: [],
+        //         description: [
+        //         {
+        //             image: ,
+        //             text: "
+        //         },
+                
+        //         ]
+        //     },
         ]
       };
     }
@@ -222,4 +138,7 @@
   </script>
   
   <style  scoped>
+    .projectDescriptionContainer{
+        margin-bottom: 10px;
+    }
   </style>
