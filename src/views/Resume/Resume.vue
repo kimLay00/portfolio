@@ -29,8 +29,8 @@
       </v-flex>
       <div class="mt-4 pt-2">
         <v-btn
-          href="https://docs.google.com/document/d/1WSR42FEgUahJuR_RArW1wz7TfUBlgj13zekRidmQgs4/edit?usp=sharing"
           target="_blank"
+          href="https://docs.google.com/document/d/1aLNTN10IxfInONh1OFt6XVMM92O5PT-3OW-Uk1zPLKU/edit"
           color="light-blue"
           dark
           large
@@ -48,32 +48,6 @@ import EducationLicences from "./Components/EducationLicences";
 import Experience from "./Components/Experience";
 
 export default {
-  metaInfo: {
-    title: "Resume",
-    titleTemplate: "%s ← Eldin's Space",
-    meta: [
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        name: "description",
-        content:
-          "Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End"
-      },
-      { charset: "utf-8" },
-      { property: "og:title", content: "Eldin' Space" },
-      { property: "og:site_name", content: "Eldin' Space" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://eldin.space" },
-      {
-        property: "og:image",
-        content: "https://i.imgur.com/Dcz2PGx.jpg"
-      },
-      {
-        property: "og:description",
-        content:
-          "Vue NUXT HTML CSS JavaScript Design Adobe XD Photoshop Coding Skills Resume Work Web Developer Front-End"
-      }
-    ]
-  },
   components:{
     EducationLicences,
     Experience
@@ -109,7 +83,6 @@ export default {
   methods: {
     startBuffer() {
       this.interval = setInterval(() => { 
-        console.warn("hihi");
           this.frontendSkills = [
             {skills: "Javascript", barValue: 90},
             {skills: "Vue", barValue: 80},
