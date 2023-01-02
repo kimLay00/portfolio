@@ -1,8 +1,8 @@
 <template>
     <v-container grid-list-xl>
       <h2 class="pl-4">
-        <span>Web</span>
-        <span class="light-blue--text text--darken-1">Portfolio</span>
+        <span>Project</span>
+        <span class="light-blue--text text--darken-1">Experience</span>
       </h2>
       <v-layout row justify-center align-center wrap class="mt-4 pt-2">
         <v-dialog
@@ -58,14 +58,6 @@
                 {{ $tech }}
               </v-chip>
             </v-card-text>
-            <!-- <v-card-actions>
-              <v-btn flat large dark color="green" :href="project.git" target="_blank">
-                <v-icon left>fab fa-github</v-icon>GitHub
-              </v-btn>
-              <v-btn large flat dark color="green" :href="project.demo" target="_blank">
-                <v-icon left>fas fa-desktop</v-icon>Demo
-              </v-btn>
-            </v-card-actions> -->
           </v-card>
         </v-dialog>
       </v-layout>
@@ -78,6 +70,51 @@
       return {
         dialog: false,
         projects: [
+          {
+                dialog: false,
+                title: "Prize Drawing Site",
+                keyImage: require('../assets/prizeDrawing/luckyDraw.png'),
+                tech: ["Javascript", "HTML", "CSS", "MVC"],
+                description: [
+                {
+                    image: require('../assets/prizeDrawing/luckyDraw.png'),
+                    text: "Prize Drawing logic is designed and developed by me. Instant function is called by controller for deciding what prize is drawn and will display on view."
+                },
+                
+                ]
+            },          
+          {
+                dialog: false,
+                title: "Whitelabel CMS",
+                keyImage: require('../assets/whitelabelCMS/keySettings.jpg'),
+                tech: ["Angular", "Node.js", "Express.js", "CSS"],
+                description: [
+                  {
+                      image: require('../assets/whitelabelCMS/keySettings.jpg'),
+                      text: "Key Settings page provide a list of whitelabel keys for user to edit."
+                  },
+                  {
+                      image: require('../assets/whitelabelCMS/keySettingContent.jpg'),
+                      text: "Corresponding whitelabel key content of all whitelabel will be displayed after clicking edit. 1 of the whitelabel can be edit as model value and can apply same value to other whitelabels by selection of 'Copy Value As Model Value'."
+                  },
+                  {
+                      image: require('../assets/whitelabelCMS/exportCommitToGit.jpg'),
+                      text: "'Export' or 'Commit and Push to GIT' can be clicked after modification of whitelabel key value. Export triggers download of whitelabel zip folder, it provides a quick whitelabel files preview for users after edit. "
+                  },
+                  {
+                      image: require('../assets/whitelabelCMS/commitMessage.jpg'),
+                      text: "'Commit and Push to GIT' allows users to push the changes to git repository. "
+                  },
+                  {
+                      image: require('../assets/whitelabelCMS/bannerConfig.jpg'),
+                      text: "Banner Config page allows user to edit banner content of whitelabels. This page enables modification of banner order and upload of new banner in different languages."
+                  },
+                  {
+                      image: require('../assets/whitelabelCMS/crazyBannerConfig.jpg'),
+                      text: "Crazy Banner is a video to be displayed after game login. This page allows preview of current crazy banner and support upload of video. User can set whether crazy banner is displayed on corresponding whitelabel and edit crazy banner content."
+                  },
+                ]
+            },
             {
                 dialog: false,
                 title: "Translate Tools",
