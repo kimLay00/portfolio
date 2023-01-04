@@ -42,8 +42,7 @@
                 <v-img 
                 contain
                 :src="$descripton.image"
-                min-width="350"
-                max-width="496"
+                width="100%"
                 >
                 </v-img>
                 <span>{{$descripton.text}}</span>
@@ -71,6 +70,19 @@
         dialog: false,
         projects: [
           {
+                dialog: false,
+                title: "Card Game",
+                keyImage: require('../assets/cardGame/cardGameImage.jpeg'),
+                tech: ["Vue", "Typescript", "SCSS", "Javascript", "MVC"],
+                description: [
+                {
+                    image: require('../assets/cardGame/cardGameImage.jpeg'),
+                    text: "Desktop and Mobile card games are developed in MVC structure.\n New games, features and bug fix are made on this project.\n Reusable and easy maintainable code are pursued in this project. This experience encourages me to keep a good coding practice."
+                },
+                
+                ]
+            },
+        {
                 dialog: false,
                 title: "Prize Drawing Site",
                 keyImage: require('../assets/prizeDrawing/luckyDraw.png'),
