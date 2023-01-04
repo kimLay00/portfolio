@@ -147,39 +147,75 @@
                   },
                 ]
             },
-           {
-            dialog: false,
-            title: "Metlife Discovery",
-            keyImage: require('../assets/metlifeDiscovery/dataFillingPage.png'),
-            tech: ["HTML", "JavaScript", "JQuery", "CSS", "NodeJS", "MySQL"],
-            description: [
-              {
-                image: require('../assets/metlifeDiscovery/dataFillingPage.png'),
-                text: "Fill in user's basic information, e.g. age, gender, occupation etc."
+          {
+                dialog: false,
+                title: "Integration Center",
+                keyImage: require('../assets/integrationCenter/Homepage.png'),
+                tech: ["Javascript", "jQuery", "HTML", "CSS"],
+                description: [
+                {
+                    image: require('../assets/integrationCenter/Homepage.png'),
+                    text: "Integration Center provides platform for agents to manage accounts by themselves. They usually raise their request to CS team for managing their request manually. The introduction of this page allows agents to read their request status clearly and have a better understanding of their account information."
+                },
+                {
+                    image: require('../assets/integrationCenter/Login.png'),
+                    text: "Login is needed for agents to read their account's info."
+                },
+                {
+                  image: require('../assets/integrationCenter/WorkOrder.png'),
+                  text: "User can check work order list for raised request's details. Sortings and data filtering is enabled, user can search related requests by date, title, work order code and request status."
+                },
+                {
+                  image: require('../assets/integrationCenter/WorkOrderDetails.png'),
+                  text: "Work Order details provide request details for user to read. They can leave comments or edit request on this page."
+                },
+                {
+                  image: require('../assets/integrationCenter/CreateWorkOrder.png'),
+                  text: "Work Order can be created on this page. Validation rules are implemented to prevent user inputting incorrect information."
+                },
+                {
+                  image: require('../assets/integrationCenter/UserInfo.png'),
+                  text: "User Info page enables user to read their account details. They can edit account info, e.g. password reset, on this page as well."
+                },
+                {
+                  image: require('../assets/integrationCenter/NotificationCenter.png'),
+                  text: "Notification will be sent to user when there's update on work orders. User can check notifications on this page."
+                }
+                ]
+            },
+            {
+                dialog: false,
+                title: "Metlife Discovery",
+                keyImage: require('../assets/metlifeDiscovery/dataFillingPage.png'),
+                tech: ["HTML", "JavaScript", "JQuery", "CSS", "NodeJS", "MSSQL"],
+                description: [
+                  {
+                    image: require('../assets/metlifeDiscovery/dataFillingPage.png'),
+                    text: "Fill in user's basic information, e.g. age, gender, occupation etc."
+                  },
+                  {
+                    image: require('../assets/metlifeDiscovery/productSuggestion.jpeg'),
+                    text: "Suggested insurance product will be recommended according to information provided by user."
+                  },
+                  {
+                    image: require('../assets/metlifeDiscovery/recommendedProduct.png'),
+                    text: "User can click product bar for reading product details."
+                  },
+                ]
               },
               {
-                image: require('../assets/metlifeDiscovery/productSuggestion.jpeg'),
-                text: "Suggested insurance product will be recommended according to information provided by user."
-              },
-              {
-                image: require('../assets/metlifeDiscovery/recommendedProduct.png'),
-                text: "User can click product bar for reading product details."
-              },
-            ]
-          },
-        //   {
-        //         dialog: false,
-        //         title: "",
-        //         keyImage: require('../assets/'),
-        //         tech: [],
-        //         description: [
-        //         {
-        //             image: ,
-        //             text: "
-        //         },
-                
-        //         ]
-        //     },
+                    dialog: false,
+                    title: "Metlife Corporate Site",
+                    keyImage: require('../assets/metLifeCorporateSite/corporateSiteScreenCapture.jpeg'),
+                    tech: ["Javascript", "HTML", "Adobe Experience Manager"],
+                    description: [
+                    {
+                        image: require('../assets/metLifeCorporateSite/corporateSiteScreenCapture.jpeg'),
+                        text: "Site Update and maintenance is made on this project."
+                    },
+                    
+                    ]
+                },
         ]
       };
     }
