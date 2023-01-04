@@ -12,7 +12,9 @@
         <br>
         <div v-for="($skillItem, $index) in frontendSkills" :key="`frontend${$index}Skills`">
           <strong>{{$skillItem.skills}}</strong>
-          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16"></v-progress-linear>
+          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16">
+            <strong class="white--text">{{ $skillItem.barValue }}</strong>
+          </v-progress-linear>
         </div>
       </v-flex>
       <v-flex xs12 sm12 md4 lg5 xl5 class="mx-2 pt-4">
@@ -24,8 +26,33 @@
         <br>
         <div v-for="($skillItem, $index) in versionControlSkills" :key="`versionControl${$index}Skills`">
           <strong>{{$skillItem.skills}}</strong>
-          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16"></v-progress-linear>
+          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16">
+            <strong class="white--text">{{ $skillItem.barValue }}</strong>
+          </v-progress-linear>
         </div>
+        <h2>
+          <span>Server</span>
+
+          <span class="light-blue--text text--darken-1">Language</span>
+        </h2>
+        <br>
+        <div v-for="($skillItem, $index) in serverLanguage" :key="`serverLang${$index}`">
+          <strong>{{$skillItem.skills}}</strong>
+          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16">
+            <strong class="white--text">{{ $skillItem.barValue }}</strong>
+          </v-progress-linear>
+        </div>
+        <h2>
+          <span>Database</span>
+        </h2>
+        <br>
+        <div v-for="($skillItem, $index) in database" :key="`database${$index}`">
+          <strong>{{$skillItem.skills}}</strong>
+          <v-progress-linear v-model="$skillItem.barValue" :buffer-value="bufferValue" color="light-blue" height="16">
+            <strong class="white--text">{{ $skillItem.barValue }}</strong>
+          </v-progress-linear>
+        </div>
+
       </v-flex>
       <div class="mt-4 pt-2">
         <v-btn
@@ -68,6 +95,13 @@ export default {
         {skills: "GIT", barValue: 0},
         {skills: "SVN", barValue: 0},
       ],
+      serverLanguage:[
+        {skills: "Node.js", barValue: 0},
+      ],
+      database:[
+        {skills: "MSSQL", barValue: 0},
+        {skills: "MongoDB", barValue: 0},
+      ],
       bufferValue: 100,
       interval: 0
     };
@@ -85,16 +119,23 @@ export default {
       this.interval = setInterval(() => { 
           this.frontendSkills = [
             {skills: "Javascript", barValue: 90},
+            {skills: "HTML", barValue: 90},
+            {skills: "CSS/ SCSS", barValue: 90},
+            {skills: "JQuery", barValue: 90},
             {skills: "Vue", barValue: 80},
-            {skills: "HTML", barValue: 80},
-            {skills: "CSS/ SCSS", barValue: 80},
-            {skills: "JQuery", barValue: 80},
-            {skills: "Typescript", barValue: 65},
+            {skills: "Typescript", barValue: 75},
             {skills: "Angular", barValue: 60},
           ];
           this.versionControlSkills = [
             {skills: "GIT", barValue: 90},
             {skills: "SVN", barValue: 60},
+          ];
+          this.serverLanguage = [
+            {skills: "Node.js", barValue: 75},
+          ];
+          this.database = [
+            {skills: "MSSQL", barValue: 80},
+            {skills: "MongoDB", barValue: 70},
           ];
         }, 800);
     }
